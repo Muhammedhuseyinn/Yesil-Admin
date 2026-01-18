@@ -1,0 +1,180 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  /* Theme Variables - Default Light Mode */
+  --primary: #01615F;
+  --primary-light: #028C89;
+  --primary-dark: #014947;
+  --secondary: #8B5CF6;
+  --accent: #10B981;
+  --red: #EF4444;
+  --yellow: #F59E0B;
+  --blue: #3B82F6;
+
+  --bg-light: #F7FAFC;
+  --bg-white: #FFFFFF;
+  --border: #E2E8F0;
+
+  --text-main: #1A202C;
+  --text-dark: #2D3748;
+  --text-medium: #4A5568;
+  --text-light: #718096;
+  --text-white: #FFFFFF;
+
+  color: var(--text-main);
+  background-color: var(--bg-light);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-light: #1A202C;
+    --bg-white: #2D3748;
+    --border: #4A5568;
+
+    --text-main: #F7FAFC;
+    --text-dark: #EDF2F7;
+    --text-medium: #E2E8F0;
+    --text-light: #A0AEC0;
+
+    /* Adjust primary for better contrast in dark mode if needed */
+    --primary-light: #01A4A0;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Global Overrides for hardcoded grays in legacy pages */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-dark);
+}
+
+p,
+span,
+label {
+  color: var(--text-medium);
+}
+
+div[style*="backgroundColor: white"],
+div[style*="backgroundColor: #fff"],
+div[style*="background: white"],
+div[style*="background-color: white"] {
+  background-color: var(--bg-white) !important;
+}
+
+/* Specific overrides for common hardcoded colors found in components */
+[style*="color: #2D3748"] {
+  color: var(--text-dark) !important;
+}
+
+[style*="color: #4A5568"] {
+  color: var(--text-medium) !important;
+}
+
+[style*="color: #718096"] {
+  color: var(--text-light) !important;
+}
+
+[style*="color: #1A202C"] {
+  color: var(--text-main) !important;
+}
+
+[style*="background-color: #F7FAFC"] {
+  background-color: var(--bg-light) !important;
+}
+
+[style*="background-color: #FFFFFF"] {
+  background-color: var(--bg-white) !important;
+}
+
+[style*="border-color: #E2E8F0"] {
+  border-color: var(--border) !important;
+}
+
+[style*="border-bottom: 1px solid #E2E8F0"] {
+  border-bottom: 1px solid var(--border) !important;
+}
+
+[style*="border-top: 1px solid #EDF2F7"] {
+  border-top: 1px solid var(--border) !important;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
